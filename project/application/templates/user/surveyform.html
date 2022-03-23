@@ -1,0 +1,118 @@
+{% extends 'administration/base.html' %}
+{% load bootstrap5 %}
+
+
+
+{% block content %}
+   
+<form>
+    <div class="row g-2 mb-5">
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="">
+            <label for="floatingInputGrid">Enter First Name</label>
+          </div>
+        </div>
+
+        <div class="col-md">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="">
+                <label for="floatingInputGrid">Enter Last Name</label>
+              </div>
+          </div>
+        </div>
+
+      <div class="row g-2 mb-5">
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="">
+            <label for="floatingInputGrid">Enter Valid Email address</label>
+          </div>
+        </div>
+
+        <div class="col-md">
+            <div class="form-floating">
+                <input type="number" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="">
+                <label for="floatingInputGrid">Enter Valid Contact Number</label>
+              </div>
+          </div>
+        </div>
+
+
+    <div class="row g-2 mb-5">
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="number" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="">
+            <label for="floatingInputGrid">Age</label>
+          </div>
+        </div>
+
+        <div class="col-md">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="">
+                <label for="floatingInputGrid">Enter Valid Precinct Number</label>
+              </div>
+          </div>
+        </div>
+
+        <div class="row g-2 mb-5">
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <div class="form-floating">
+              <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                <option selected>Role</option>
+                <option value="1">Poll Watcher</option>
+                <option value="2">Coordinator</option>
+                
+              </select>
+              <label for="floatingSelectGrid">Select your Role</label>
+            </div>
+          </div>
+        </div>
+
+
+      <div class="row g-2 mb-5">
+        <div class="col-md">
+            <div class="form-floating">
+              <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                <option selected>Province</option>
+                <option value="1">Metro Manila</option>
+                <option value="2">Quezon</option>
+                <option value="3">Ilocos Norte</option>
+              </select>
+              <label for="floatingSelectGrid">Select your Province</label>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="form-floating">
+              <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                <option selected>Municipality</option>
+                <option value="1">Caloocan</option>
+                <option value="2">Marikina</option>
+                <option value="3">Quezon City</option>
+              </select>
+              <label for="floatingSelectGrid">Select your Municipality/City</label>
+            </div>
+          </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+              <option selected>Barangay</option>
+              <option value="1">Vasra</option>
+              <option value="2">Culiat</option>
+              <option value="3">Pasong Tamo</option>
+            </select>
+            <label for="floatingSelectGrid">Select your Barangay</label>
+          </div>
+        </div>
+      </div>
+     
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-success" type="button">Submit Survey</button>
+        </div>
+  </form>
+ 
+    
+
+
+     
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% load bootstrap5 %}
+{% load static %}
+
+<html>
+    <head>
+        <title>{% block title %}{% endblock title %}</title>
+    </head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    
+    {% block default_script %}{% endblock default_script %}
+    {% block css %}{% endblock css%}
+   
+    <body>
+        <nav class="navbar navbar-light" style="background-color: #f30909;">
+            <div class="container">
+              
+                    <a class="navbar-brand"> <span class="navbar-brand mb-0 h1" style="color: #fffafafb;">BAGONG SANDIGAN NG MAMAMAYAN</span><img src="https://icons.iconarchive.com/icons/wikipedia/flags/512/PH-Philippines-Flag-icon.png" alt="phflag" style="width:3.5%;margin-bottom: 0.5%; margin-left:0.0001%"></a>
+                
+                
+        </nav>
+        <main class="container mt-4">
+            {% block content %}
+            {% endblock content %}
+        </main>
+    </body>
+    {% block script %}{% endblock script %}
+</html>
