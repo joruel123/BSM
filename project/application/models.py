@@ -27,6 +27,7 @@ class Survey(models.Model):
     contact = models.CharField(max_length=250)
     age = models.IntegerField(default=0)
     precinct = models.CharField(max_length=250)
+    role = models.CharField(max_length=250, default='Poll Watcher')
 
     province = models.ForeignKey(Province, on_delete=models.CASCADE)
     city = models.ForeignKey(City, on_delete=models.CASCADE)

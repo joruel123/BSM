@@ -1,0 +1,12 @@
+<div class="form-floating">
+    <select class="form-select"
+        name='barangay'
+    >
+        <option selected>Barangay</option>
+        {% for barangay in barangay %}
+            <option value={{ barangay.id }}>{{ barangay.name }}</option>
+        {% endfor %}
+    </select>
+    <label for="floatingSelectGrid">Select your Barangay</label>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="form-floating">
+    <select class="form-select"
+        name='city'
+        hx-get="{% url 'barangay' %}"
+        hx-trigger="change"
+        hx-target="#barangay"
+    >
+        <option selected>Municipality</option>
+        {% for city in city %}
+            <option value={{ city.id }}>{{ city.name }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="floatingSelectGrid">Select your Municipality/City</label>
+</div>

@@ -10,7 +10,7 @@
 <form>
 </form>
    
-<table id="surveyTable" class="table table-striped" style="width:100%">
+<table id="surveyTable" class="table table-striped">
     <thead>
         <tr>
           <th scope="col">#</th>
@@ -20,6 +20,7 @@
           <th scope="col">Contact Number</th>
           <th scope="col">Age</th>
           <th scope="col">Precinct Number</th>
+          <th scope="col">Role</th>
           <th scope="col">Province</th>
           <th scope="col">Municipality</th>
           <th scope="col">Barangay</th>
@@ -35,6 +36,7 @@
             <td>{{ survey.contact }}</td>
             <td>{{ survey.age }}</td>
             <td>{{ survey.precinct }}</td>
+            <td>{{ survey.role }}</td>
             <td>{{ survey.province.name }}</td>
             <td>{{ survey.city.name }}</td>
             <td>{{ survey.barangay.name }}</td>
