@@ -3,9 +3,14 @@
 
 
 
+
 {% block content %}
+
+
+<form>
+</form>
    
-<table class="table table-striped table-success">
+<table id="surveyTable" class="table table-striped" style="width:100%">
     <thead>
         <tr>
           <th scope="col">#</th>
@@ -21,43 +26,28 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Juan</td>
-          <td>Cruz</td>
-          <td>Juan.Cruz08@gmail.com</td>
-          <td>09171231234</td>
-          <td>35</td>
-          <td>01AA1</td>
-          <td>Metro Manila</td>
-          <td>Quezon City</td>
-          <td>Pasong Tamo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Mark</td>
-          <td>Sanchez</td>
-          <td>Mark.Sanchez78@gmail.com</td>
-          <td>09171231234</td>
-          <td>24</td>
-          <td>02BA1</td>
-          <td>Ilocos Norte</td>
-          <td>Burgos</td>
-          <td>Nagsurot</td>
-        </tr>
-        <tr>
-        <th scope="row">3</th>
-        <td>Joshua</td>
-          <td>Cabuyao</td>
-          <td>Cabuyao.Josh32@gmail.com</td>
-          <td>09171231234</td>
-          <td>42</td>
-          <td>02BA3</td>
-          <td>Metro Manila</td>
-          <td>Marikina</td>
-          <td>San Roque</td>
-        </tr>
+        {% for survey in survey %}
+          <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ survey.first_name }}</td>
+            <td>{{ survey.last_name }} </td>
+            <td>{{ survey.email }}</td>
+            <td>{{ survey.contact }}</td>
+            <td>{{ survey.age }}</td>
+            <td>{{ survey.precinct }}</td>
+            <td>{{ survey.province.name }}</td>
+            <td>{{ survey.city.name }}</td>
+            <td>{{ survey.barangay.name }}</td>
+          </tr>
+        {% endfor %}
       </tbody>
   </table>
+
+<script>
+  $(document).ready(function() {
+      $('#surveyTable').DataTable();
+  } );
+</script>
      
 {% endblock content %}
+

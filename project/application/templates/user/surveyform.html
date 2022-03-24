@@ -1,11 +1,14 @@
 {% extends 'administration/base.html' %}
 {% load bootstrap5 %}
-
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 
 
 {% block content %}
+
+
    
-<form>
+{% comment %} <form>
     <div class="row g-2 mb-5">
         <div class="col-md">
           <div class="form-floating">
@@ -75,9 +78,9 @@
             <div class="form-floating">
               <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
                 <option selected>Province</option>
-                <option value="1">Metro Manila</option>
-                <option value="2">Quezon</option>
-                <option value="3">Ilocos Norte</option>
+                {% for province in province %}
+                  <option value={{ province.name }}>{{ province.name }}</option>
+                {% endfor %}
               </select>
               <label for="floatingSelectGrid">Select your Province</label>
             </div>
@@ -109,6 +112,17 @@
       <div class="d-grid gap-2 col-6 mx-auto">
         <button class="btn btn-success" type="button">Submit Survey</button>
         </div>
+  </form> {% endcomment %}
+  {% comment %} data-cities-url="{% url 'ajax_load_cities' %}" {% endcomment %}
+
+  <form method="post" id="surveyForm" >
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  {% endbuttons %}
   </form>
  
     
